@@ -10,7 +10,7 @@ function getLocation(){
 	    console.log(lastPos["latitude"], lastPos["longitude"]);
 	   // console.log(inDistance(34.074949, -118.441318));
 		var inrange = 0;
-		var set = JSONE.parse(localStorage.getItem('settings'));
+		var set = JSON.parse(localStorage.getItem('settings'));
 	    for (var key in localStorage){
 	    	if (key=='settings')
 	    		continue;
@@ -20,14 +20,14 @@ function getLocation(){
 	    	if(getDistance(locStore['lat'], locStore['lng']) < set[1]){
 	    		inrange++;
 	   			set[0] = true;
-	   			allTabs.forEach(function(tab){
-	   				muteTab(tab);
-	   			});
+	   			// allTabs.forEach(function(tab){
+	   			// 	muteTab(tab);
+	   			// });
 	    	}
 	    }
-	    if(inrange > 0){
-	    	set[0] = false;
-	    }
+	    // if(inrange > 0){
+	    // 	set[0] = false;
+	    // }
 	    localStorage.setItem('settings', JSON.stringify(set));
 
 	  }, showError);
@@ -119,6 +119,7 @@ window.onload = function() {
 					}
 				}
 			}
+			
 		});
 
 		chrome.tabs.onCreated.addListener(function(newTab){
