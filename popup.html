@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link href="https://fonts.googleapis.com/css?family=League+Script" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="popupjs.js"></script>
+<link rel="stylesheet" href="popup.css">
+<script
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuEbfs5Xb5cL_0jjKPZe3ngrZlfrVjeyo&libraries=places&callback=initAutocomplete"
+   async defer>
+    </script>
+
+	<div class="relative">
+	  <img id="logo" src="/logo.png">
+	  <p class="absolute-text">Shh..</p>
+	</div>
+		<br>
+	<form id="frm1">
+	 	<input id="locationInput" type="text" placeholder="Enter Zone"><br>
+	</form>
+	<div class="container-fluid">
+		<ul id="buttonHolder">
+		  <li><a href="#" id ="mutenew" class="round green">New<span class="round">Mute all new tabs</span></a></li>
+		  <li><a href="#" class="round red">Mute<span id ="muteall" class="round">Mute all open tabs</span></a></li>
+		  <li><a href="#" id ="unmuteall" class="round yellow">Unmute<span class="round">Unmute all open tabs</span></a></li>
+		</ul> 
+	</div>
+
+
+	<p id="demo"></p>
+	<ul id="locationHolder">
+  		<li class="locationItem">Coffee<button type="button" class="btn btn-default btn-sm mybutton">
+          <span class="glyphicon glyphicon-minus"></span>
+        </button></li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ul>  
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+Andrew Ding 504748356
+
+12.18
+
+a) unsafe, the L1 instruction takes in into unsafe region
+b)safe
+c) unsafe, the trajectory becomes unsafe at the L2 instruction
+
+12.24
+The functions in the RIO I/O package are reentrant only if the calling
+threads pass only pointers to nonshared data to them. If not, they are nonreentrant. If reentrant, they do not use global variables to share state.
