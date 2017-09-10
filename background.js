@@ -10,7 +10,7 @@ function getLocation(){
 	    console.log(lastPos["latitude"], lastPos["longitude"]);
 	   // console.log(inDistance(34.074949, -118.441318));
 		var inrange = 0;
-		var set = JSONE.parse(localStorage.getItem('settings'));
+		var set = JSON.parse(localStorage.getItem('settings'));
 	    for (var key in localStorage){
 	    	if (key=='settings')
 	    		continue;
