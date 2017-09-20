@@ -100,7 +100,7 @@ function initAutocomplete() {
         // location types.
         autocomplete = new google.maps.places.SearchBox(
             /** @type {!HTMLInputElement} */
-            (document.getElementById('locationInput')),
+            (document.getElementById('locationInput'))
             //{types: ['geocode']}
             );
 
